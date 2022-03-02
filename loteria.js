@@ -8,6 +8,11 @@ $(document).ready(function($) {
 		let cartas = [];
 
 		for (var i = 1; i <= 16; i++) {
+			$("#c1_"+i).removeClass("marca");
+			$("#c2_"+i).removeClass("marca");
+		}
+
+		for (var i = 1; i <= 16; i++) {
 
 			let b = true;
 
@@ -23,6 +28,7 @@ $(document).ready(function($) {
 
 				if(!exists){
 					$("#c1_"+i).attr("src", "img/loteria/"+num+".jpg");
+					$("#c1_"+i).attr("carta", num);
 					b=false;
 					cartas.push(num);
 				}
@@ -49,7 +55,7 @@ $(document).ready(function($) {
 
 				if(!exists){
 					$("#c2_"+i).attr("src", "img/loteria/"+num+".jpg");
-					$("#c2_"+i).attr("n_img", num);
+					$("#c2_"+i).attr("carta", num);
 					b=false;
 					cartas2.push(num);
 				}
@@ -78,8 +84,44 @@ $(document).ready(function($) {
 			$("#lista").append(
 				"<div class='col-1'><img class='img-fluid' src='img/loteria/"+baraja[c]+".jpg'></div>"
 			);
+
+			for (let index = 1; index <=16; index++) {
+
+				if($("#c1_"+index).attr("carta") == baraja[c]){
+					$("#c1_"+index).addClass("marca");
+				}
+
+				if($("#c2_"+index).attr("carta") == baraja[c]){
+					$("#c2_"+index).addClass("marca");
+				}
+
+
+			}
+
 			c++;
 		}
+		var cont_1 = 0;
+		var cont_2 = 0;
+		if(c>15){
+			for (let index = 1; index <= 16; index++) {
+				if($("#c1_"+index).hasClass("marca")){
+					cont_1++;
+				}
+				
+				if($("#c2_"+index).hasClass("marca")){
+					cont_2++;
+				}	
+			}
+
+			if(cont_1 == 16) {
+				alert("GANA CARTA 1");
+			}
+
+			if(cont_2 == 16) {
+				alert("GANA CARTA 2");
+			}
+		}
+		
 	});
 
 });
