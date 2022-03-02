@@ -7,6 +7,13 @@
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/loteria.js"></script>
 	<title>Document</title>
+	<style type="text/css">
+		    .frijol
+		    {
+		      top: 60px;
+		      left: 80px;
+		    }
+	</style>
 </head>
 <body>
 	<div class="container">
@@ -15,36 +22,41 @@
 			<div class="col">
 		        <h1>Juego de Lotería</h1><hr>
 			    <button id="iniciar" class="btn btn-primary">Reiniciar Juego</button>
+				<button id="darCarta" class="btn btn-success" style="display: none;">Sacar Carta</button>
 			</div>
 
+		</div><br>
+
+		<div class="row" id="lista">
+			
 		</div><br>
 
 		<div class="row">
 			<div class="col-md-6 card">
 				<table>
 					<tr>
-						<td><img class="img-fluid" src="" alt="" id="c1_1"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_2"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_3"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_4"></td>
+						<td id="td_c1_1"><img class="img-fluid" src="" alt="" id="c1_1"></td>
+						<td id="td_c1_2"><img class="img-fluid" src="" alt="" id="c1_2"></td>
+						<td id="td_c1_3"><img class="img-fluid" src="" alt="" id="c1_3"></td>
+						<td id="td_c1_4"><img class="img-fluid" src="" alt="" id="c1_4"></td>
 					</tr>
 					<tr>
-						<td><img class="img-fluid" src="" alt="" id="c1_5"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_6"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_7"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_8"></td>
+						<td id="td_c1_5"><img class="img-fluid" src="" alt="" id="c1_5"></td>
+						<td id="td_c1_6"><img class="img-fluid" src="" alt="" id="c1_6"></td>
+						<td id="td_c1_7"><img class="img-fluid" src="" alt="" id="c1_7"></td>
+						<td id="td_c1_8"><img class="img-fluid" src="" alt="" id="c1_8"></td>
 					</tr>
 					<tr>
-						<td><img class="img-fluid" src="" alt="" id="c1_9"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_10"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_11"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_12"></td>
+						<td id="td_c1_9"><img class="img-fluid" src="" alt="" id="c1_9"></td>
+						<td id="td_c1_10"><img class="img-fluid" src="" alt="" id="c1_10"></td>
+						<td id="td_c1_11"><img class="img-fluid" src="" alt="" id="c1_11"></td>
+						<td id="td_c1_12"><img class="img-fluid" src="" alt="" id="c1_12"></td>
 					</tr>
 					<tr>
-						<td><img class="img-fluid" src="" alt="" id="c1_13"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_14"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_15"></td>
-						<td><img class="img-fluid" src="" alt="" id="c1_16"></td>
+						<td id="td_c1_13"><img class="img-fluid" src="" alt="" id="c1_13"></td>
+						<td id="td_c1_14"><img class="img-fluid" src="" alt="" id="c1_14"></td>
+						<td id="td_c1_15"><img class="img-fluid" src="" alt="" id="c1_15"></td>
+						<td id="td_c1_16"><img class="img-fluid" src="" alt="" id="c1_16"></td>
 					</tr>
 				</table>
 			</div>
